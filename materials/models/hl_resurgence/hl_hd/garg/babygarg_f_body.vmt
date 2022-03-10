@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\hl_resurgence\hl_hd\garg\babygarg_f_body"
+	"$bumpmap" "models\hl_resurgence\hl_hd\garg\garg_body_n"
+}
