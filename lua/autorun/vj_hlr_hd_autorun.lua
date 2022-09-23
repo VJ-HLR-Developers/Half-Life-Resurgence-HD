@@ -14,7 +14,7 @@ local VJExists = file.Exists("lua/autorun/vj_base_autorun.lua","GAME")
 if VJExists == true then
 	include('autorun/vj_controls.lua')
 	
-	--[[
+	
 	local vCat = "HL Resurgence: HD"
 	VJ.AddCategoryInfo(vCat, {Icon = "vj_hl/icons/hl1_hd.png"})
 		
@@ -55,7 +55,7 @@ if VJExists == true then
 
 		-- Sven Co-Op
 		VJ.AddNPC("Gargantua (Baby)","npc_vj_hlrsv_garg_baby_hd",vCat)
-		--]]
+		
 	
 -- !!!!!! DON'T TOUCH ANYTHING BELOW THIS !!!!!! -------------------------------------------------------------------------------------------------------------------------
 	AddCSLuaFile(AutorunFile)
