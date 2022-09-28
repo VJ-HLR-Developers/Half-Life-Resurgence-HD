@@ -19,7 +19,7 @@ if VJExists == true then
 	VJ.AddCategoryInfo(vCat, {Icon = "vj_hl/icons/hl1_hd.png"})
 		
 		-- HECU
-		-- VJ.AddNPC("Human Grunt","npc_vj_hlr1_hgrunt_hd",vCat) // Not really needed since we have OpFor
+		VJ.AddNPC("Human Grunt","npc_vj_hlr1_hgrunt_hd",vCat)
 		VJ.AddNPC("Human Sergeant","npc_vj_hlr1_hgrunt_serg_hd",vCat)
 			-- Opposing Force
 			VJ.AddNPC("Human Grunt","npc_vj_hlrof_hgrunt_hd",vCat)
