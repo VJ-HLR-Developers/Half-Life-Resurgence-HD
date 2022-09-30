@@ -1,7 +1,7 @@
 if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base 						= "weapon_vj_base"
-SWEP.PrintName					= "MP5 (Except it's not)"
+SWEP.PrintName					= "M4"
 SWEP.Author 					= "DrVrej"
 SWEP.Contact					= "http://steamcommunity.com/groups/vrejgaming"
 SWEP.Purpose					= "This weapon is made for Players and NPCs"
@@ -29,14 +29,14 @@ SWEP.WorldModel_CustomPositionBone = "Bip01 R Hand" -- The bone it will use as t
 SWEP.Primary.Damage				= 5 -- Damage
 SWEP.Primary.ClipSize			= 50 -- Max amount of bullets per clip
 SWEP.Primary.Ammo				= "SMG1" -- Ammo type
-SWEP.Primary.Sound				= {"vj_hlr/hl1hd_weapon/m16/hks1.wav","vj_hlr/hl1hd_weapon/m16/hks2.wav","vj_hlr/hl1hd_weapon/m16/hks3.wav"}
-SWEP.Primary.DistantSound		= {"vj_hlr/hl1hd_weapon/m16/hks_distant.wav"}
+SWEP.Primary.Sound				= {"vj_hlr/hl1hd_weapon/m4/hks1.wav","vj_hlr/hl1hd_weapon/m4/hks2.wav","vj_hlr/hl1hd_weapon/m4/hks3.wav"}
+SWEP.Primary.DistantSound		= {"vj_hlr/hl1hd_weapon/m4/hks_distant_new.wav"}
 SWEP.Primary.TracerType = "VJ_HLR_Tracer"
 
 SWEP.PrimaryEffects_SpawnShells = false
 
 -- Custom
-SWEP.HLR_ValidModels = {"models/vj_hlr/opfor/hgrunt.mdl","models/vj_hlr/hl1/hgrunt.mdl","models/vj_hlr/opfor/hgrunt_medic.mdl","models/vj_hlr/opfor/hgrunt_engineer.mdl","models/vj_hlr/hl1/rgrunt.mdl","models/vj_hlr/hl1/rgrunt_black.mdl","models/vj_hlr/opfor/massn.mdl","models/vj_hlr/hl_hd/hassault.mdl","models/vj_hlr/opfor_hd/hgrunt.mdl","models/vj_hlr/opfor_hd/hgrunt_medic.mdl","models/vj_hlr/opfor_hd/hgrunt_engineer.mdl"}
+SWEP.HLR_ValidModels = {"models/vj_hlr/hl_hd/rgrunt.mdl"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function SWEP:CustomOnInitialize()
 	timer.Simple(0.1,function() -- Minag mikani modelner tske, yete ooresh model-e, serpe as zenke

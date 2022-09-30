@@ -10,14 +10,14 @@ SWEP.Category					= "VJ Base"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire 		= false -- Next time it can use primary fire
 SWEP.NPC_CustomSpread	 		= 2.5 -- This is added on top of the custom spread that's set inside the SNPC! | Starting from 1: Closer to 0 = better accuracy, Farther than 1 = worse accuracy
-SWEP.NPC_ReloadSound			= {"vj_hlr/hl1_weapon/shotgun/shotgun_reload.wav"} -- Sounds it plays when the base detects the SNPC playing a reload animation
+SWEP.NPC_ReloadSound			= {"vj_hlr/hl1hd_weapon/spas12/shotgun_reload.wav"} -- Sounds it plays when the base detects the SNPC playing a reload animation
 SWEP.NPC_ExtraFireSound			= {"vj_hlr/hl1hd_weapon/spas12/scock1.wav"} -- Plays an extra sound after it fires (Example: Bolt action sound)
 SWEP.NPC_ExtraFireSoundTime		= 0.2 -- How much time until it plays the sound (After Firing)?
 SWEP.NPC_CanBePickedUp			= false -- Can this weapon be picked up by NPCs? (Ex: Rebels)
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.MadeForNPCsOnly 			= true -- Is this weapon meant to be for NPCs only?
 -- SWEP.WorldModel					= "models/vj_hlr/weapons/w_shotgun_hd.mdl"
-SWEP.WorldModel					= "models/vj_hlr/weapons/w_shotgun.mdl"
+SWEP.WorldModel					= "models/vj_hlr/weapons/w_shotgun_hd.mdl"
 SWEP.HoldType 					= "shotgun"
 SWEP.Spawnable					= false
 SWEP.AdminSpawnable				= false
@@ -33,14 +33,14 @@ SWEP.Primary.NumberOfShots		= 5 -- How many shots per attack?
 SWEP.Primary.ClipSize			= 8 -- Max amount of bullets per clip
 SWEP.Primary.Ammo				= "SMG1" -- Ammo type
 SWEP.Primary.Sound				= {"vj_hlr/hl1hd_weapon/spas12/sbarrel1.wav"}
-SWEP.Primary.DistantSound		= {"vj_hlr/hl1hd_weapon/spas12/sbarrel_distant.wav"}
+SWEP.Primary.DistantSound		= {"vj_hlr/hl1hd_weapon/spas12/sbarrel_distant_new.wav"}
 SWEP.PrimaryEffects_ShellType 	= "VJ_Weapon_ShotgunShell1"
 SWEP.Primary.TracerType = "VJ_HLR_Tracer"
 
 SWEP.PrimaryEffects_SpawnShells = false
 
 -- Custom
-SWEP.HLR_ValidModels = {"models/vj_hlr/opfor/hgrunt.mdl","models/vj_hlr/hl1/hgrunt.mdl","models/vj_hlr/opfor/hgrunt_medic.mdl","models/vj_hlr/opfor/hgrunt_engineer.mdl","models/vj_hlr/hl1/rgrunt.mdl","models/vj_hlr/hl1/rgrunt_black.mdl","models/vj_hlr/opfor_hd/hgrunt.mdl","models/vj_hlr/opfor_hd/hgrunt_medic.mdl","models/vj_hlr/opfor_hd/hgrunt_engineer.mdl"}
+SWEP.HLR_ValidModels = {"models/vj_hlr/hl_hd/rgrunt.mdl"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function SWEP:CustomOnInitialize()
 	timer.Simple(0.1,function() -- Minag mikani modelner tske, yete ooresh model-e, serpe as zenke
@@ -59,17 +59,9 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function SWEP:CustomOnDrawWorldModel() -- This is client only!
 	if IsValid(self:GetOwner()) then
-		if self:GetModel() != "models/vj_hlr/weapons/w_shotgun.mdl" then
-			self:SetModel("models/vj_hlr/weapons/w_shotgun.mdl")
-			self.WorldModel = "models/vj_hlr/weapons/w_shotgun.mdl"
-		end
 		self.WorldModel_Invisible = true
 		return false
 	else
-		if self:GetModel() != "models/vj_hlr/weapons/w_shotgun_hd.mdl" then
-			self:SetModel("models/vj_hlr/weapons/w_shotgun_hd.mdl")
-			self.WorldModel = "models/vj_hlr/weapons/w_shotgun_hd.mdl"
-		end
 		self.WorldModel_Invisible = false
 		return true -- return false to not draw the world model
 	end
