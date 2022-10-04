@@ -36,7 +36,7 @@ SWEP.Primary.TracerType = "VJ_HLR_Tracer"
 SWEP.PrimaryEffects_SpawnShells = false
 
 -- Custom
-SWEP.HLR_ValidModels = {"models/vj_hlr/hl_hd/rgrunt.mdl"}
+SWEP.HLR_ValidModels = {"models/vj_hlr/hl_hd/hgrunt.mdl","models/vj_hlr/hl_hd/rgrunt.mdl"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function SWEP:CustomOnInitialize()
 	timer.Simple(0.1,function() -- Minag mikani modelner tske, yete ooresh model-e, serpe as zenke
