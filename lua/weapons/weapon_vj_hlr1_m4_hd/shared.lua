@@ -39,7 +39,7 @@ SWEP.HLR_ValidModels = {"models/vj_hlr/hl_hd/hgrunt.mdl","models/vj_hlr/hl_hd/rg
 function SWEP:CustomOnInitialize()
 	timer.Simple(0.1,function() -- Minag mikani modelner tske, yete ooresh model-e, serpe as zenke
 		if IsValid(self) && IsValid(self:GetOwner()) then
-			if !VJ_HasValue(self.HLR_ValidModels,self:GetOwner():GetModel()) then
+			if !VJ.HasValue(self.HLR_ValidModels,self:GetOwner():GetModel()) then
 				if IsValid(self:GetOwner():GetCreator()) then
 					self:GetOwner():GetCreator():PrintMessage(HUD_PRINTTALK,self.PrintName.." removed! It's made for specific NPCs only!")
 				end
@@ -50,8 +50,6 @@ function SWEP:CustomOnInitialize()
 		end
 	end)
 end
-//SWEP.NPC_SecondaryFireChance = 1 -- Chance that the secondary fire is used | 1 = always
-//SWEP.NPC_SecondaryFireNext = VJ_Set(3,3) -- How much time until the secondary fire can be used again?
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function SWEP:NPC_SecondaryFire()
 	local pos = self:GetNW2Vector("VJ_CurBulletPos")

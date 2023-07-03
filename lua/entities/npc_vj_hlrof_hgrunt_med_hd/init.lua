@@ -34,9 +34,9 @@ function ENT:CustomOnMedic_BeforeHeal()
 			self:SetBodygroup(2,2)
 		end
 	end)
-	self:VJ_ACT_PLAYACTIVITY("pull_needle",true,VJ_GetSequenceDuration(self,"pull_needle") + 0.1,false,0,{},function(vsched)
+	self:VJ_ACT_PLAYACTIVITY("pull_needle",true,VJ.AnimDuration(self,"pull_needle") + 0.1,false,0,{},function(vsched)
 		vsched.RunCode_OnFinish = function()
-			self:VJ_ACT_PLAYACTIVITY("give_shot",true,VJ_GetSequenceDuration(self,"give_shot") + 0.1,false,0,{},function(vsched)
+			self:VJ_ACT_PLAYACTIVITY("give_shot",true,VJ.AnimDuration(self,"give_shot") + 0.1,false,0,{},function(vsched)
 				vsched.RunCode_OnFinish = function()
 					self:VJ_ACT_PLAYACTIVITY("store_needle",true,false)
 				end
