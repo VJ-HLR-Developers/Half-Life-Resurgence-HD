@@ -46,8 +46,8 @@ function ENT:CustomOnMedic_BeforeHeal()
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnMedic_OnReset()
-	timer.Simple(0.85,function() if IsValid(self) then self:SetBodygroup(2,3) end end)
-	timer.Simple(1.7,function() if IsValid(self) then self:SetBodygroup(2,self.HECUMedic_HealBG) end end)
+	timer.Simple(0.85, function() if IsValid(self) then self:SetBodygroup(2,3) end end)
+	timer.Simple(1.7, function() if IsValid(self) then self:SetBodygroup(2,self.HECUMedic_HealBG) end end)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnDeath_BeforeCorpseSpawned(dmginfo,hitgroup)
