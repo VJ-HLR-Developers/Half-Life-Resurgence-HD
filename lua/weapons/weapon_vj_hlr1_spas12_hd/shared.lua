@@ -32,7 +32,7 @@ SWEP.Primary.ClipSize			= 8 -- Max amount of bullets per clip
 SWEP.Primary.Ammo				= "SMG1" -- Ammo type
 SWEP.Primary.Sound				= {"vj_hlr/hl1hd_weapon/spas12/sbarrel1.wav"}
 SWEP.Primary.DistantSound		= {"vj_hlr/hl1hd_weapon/spas12/sbarrel_distant_new.wav"}
-SWEP.PrimaryEffects_ShellType 	= "VJ_Weapon_ShotgunShell1"
+SWEP.PrimaryEffects_ShellType 	= "ShotgunShellEject"
 SWEP.Primary.TracerType = "VJ_HLR_Tracer"
 
 SWEP.PrimaryEffects_SpawnShells = false
