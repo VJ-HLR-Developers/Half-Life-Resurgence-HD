@@ -20,10 +20,10 @@ function ENT:CustomOnThink_AIEnabled()
 	if IsValid(self:GetEnemy()) && self:Visible(self:GetEnemy()) && self.HECU_NextTurretT < CurTime() && self.HECU_PlacingTurret == false && !IsValid(self.HECU_MyTurret) then
 		self.HECU_NextTurretT = CurTime() + 30
 		self.HECU_PlacingTurret = true
-		self:VJ_ACT_PLAYACTIVITY("pull_torch_wgun",true,false,true,0,{},function(vsched)
-			vsched.RunCode_OnFinish = function()
-				self:VJ_ACT_PLAYACTIVITY("open_floor_grate",true,false,false,0,{},function(vsched)
-					vsched.RunCode_OnFinish = function()
+		self:VJ_ACT_PLAYACTIVITY("pull_torch_wgun",true,false,true,0,{},function(sched)
+			sched.RunCode_OnFinish = function()
+				self:VJ_ACT_PLAYACTIVITY("open_floor_grate",true,false,false,0,{},function(sched2)
+					sched2.RunCode_OnFinish = function()
 						self:VJ_ACT_PLAYACTIVITY("store_torch",true,false,false)
 					end
 				end)
