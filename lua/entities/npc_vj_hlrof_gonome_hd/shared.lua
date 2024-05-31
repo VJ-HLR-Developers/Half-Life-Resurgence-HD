@@ -1,4 +1,4 @@
-ENT.Base 			= "npc_vj_hlrof_gonome"
+ENT.Base 			= "npc_vj_creature_base"
 ENT.Type 			= "ai"
 ENT.PrintName 		= ""
 ENT.Author 			= "DrVrej"
