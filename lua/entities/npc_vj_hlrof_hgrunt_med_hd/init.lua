@@ -6,9 +6,9 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = "models/vj_hlr/opfor_hd/hgrunt_medic.mdl" -- The game will pick a random model from the table when the SNPC is spawned | Add as many as you want
+ENT.Model = "models/vj_hlr/opfor_hd/hgrunt_medic.mdl" -- Model(s) to spawn with | Picks a random one if it's a table
 
-ENT.IsMedicSNPC = true -- Is this SNPC a medic? Does it heal other friendly friendly SNPCs, and players(If friendly)
+ENT.IsMedicSNPC = true -- Is this NPC a medic? It will heal friendly players and NPCs
 
 -- Custom
 ENT.HECU_Type = 2
