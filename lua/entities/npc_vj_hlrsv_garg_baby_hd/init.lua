@@ -8,7 +8,7 @@ include("shared.lua")
 -----------------------------------------------*/
 ENT.Model = "models/vj_hlr/hl_hd/babygarg.mdl" -- Model(s) to spawn with | Picks a random one if it's a table
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnInitialize()
+function ENT:Init()
 	if self.Garg_Type == 0 then -- Adult garg
 		self:SetCollisionBounds(Vector(70,70,210), Vector(-70,-70,0))
 	elseif self.Garg_Type == 1 then -- Baby garg

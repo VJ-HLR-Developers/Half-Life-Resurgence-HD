@@ -8,8 +8,8 @@ include("shared.lua")
 -----------------------------------------------*/
 ENT.Model = "models/vj_hlr/hl_hd/agrunt.mdl" -- Model(s) to spawn with | Picks a random one if it's a table
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo,hitgroup)
-	if hitgroup == HITGROUP_GEAR then
+function ENT:OnDamaged(dmginfo, hitgroup, status)
+	if status == "PreDamage" && hitgroup == HITGROUP_GEAR then
 		dmginfo:SetDamage(0)
 
 		local rico = EffectData()

@@ -17,7 +17,7 @@ ENT.HECU_PlacingTurret = false
 ENT.HECU_NextTurretT = 0
 ENT.HECU_GasTankHit = false
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnThink_AIEnabled()
+function ENT:OnThinkActive()
 	if IsValid(self:GetEnemy()) && self:Visible(self:GetEnemy()) && self.HECU_NextTurretT < CurTime() && self.HECU_PlacingTurret == false && !IsValid(self.HECU_MyTurret) then
 		self.HECU_NextTurretT = CurTime() + 30
 		self.HECU_PlacingTurret = true
@@ -44,8 +44,8 @@ function ENT:CustomOnThink_AIEnabled()
 	end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo,hitgroup)
-	if hitgroup == HITGROUP_GEAR then
+function ENT:OnDamaged(dmginfo, hitgroup, status)
+	if status == "PreDamage" && hitgroup == HITGROUP_GEAR then
 		self.HECU_GasTankHit = true
 		dmginfo:SetDamage(999999999999)
 		dmginfo:SetDamageType(DMG_BLAST)

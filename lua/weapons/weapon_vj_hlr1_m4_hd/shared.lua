@@ -25,7 +25,7 @@ SWEP.WorldModel_CustomPositionOrigin = Vector(0,-2,0.5)
 SWEP.WorldModel_CustomPositionBone = "Bip01 R Hand" -- The bone it will use as the main point
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage				= 5 -- Damage
-SWEP.Primary.ClipSize			= 50 -- Max amount of bullets per clip
+SWEP.Primary.ClipSize			= 50 -- Max amount of rounds per clip
 SWEP.Primary.Ammo				= "SMG1" -- Ammo type
 SWEP.Primary.Sound				= {"vj_hlr/hl1hd_weapon/m4/hks1.wav","vj_hlr/hl1hd_weapon/m4/hks2.wav","vj_hlr/hl1hd_weapon/m4/hks3.wav"}
 SWEP.Primary.DistantSound		= {"vj_hlr/hl1hd_weapon/m4/hks_distant_new.wav"}
@@ -36,7 +36,7 @@ SWEP.PrimaryEffects_SpawnShells = false
 -- Custom
 SWEP.HLR_ValidModels = {"models/vj_hlr/hl_hd/hgrunt.mdl","models/vj_hlr/hl_hd/rgrunt.mdl"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function SWEP:CustomOnInitialize()
+function SWEP:Init()
 	timer.Simple(0.1,function() -- Minag mikani modelner tske, yete ooresh model-e, serpe as zenke
 		if IsValid(self) && IsValid(self:GetOwner()) then
 			if !VJ.HasValue(self.HLR_ValidModels,self:GetOwner():GetModel()) then

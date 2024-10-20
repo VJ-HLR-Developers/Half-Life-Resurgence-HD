@@ -203,7 +203,7 @@ ENT.SoundTbl_Death = {
 ENT.HECU_Type = 1
 ENT.HECU_WepBG = 3
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:HECU_CustomOnInitialize()
+function ENT:HECU_OnInit()
 	if self.HECU_Type == 1 then
 		self:SetBodygroup(1,math.random(0,7))
 		
@@ -232,8 +232,8 @@ function ENT:HECU_CustomOnInitialize()
 	self.AnimTbl_Run = {ACT_SPRINT}
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnThink()
-	self:HECU_CustomOnThink()
+function ENT:OnThink()
+	self:HECU_OnThink()
 	-- Veravorvadz kalel
 	if self:Health() <= (self:GetMaxHealth() / 2.2) && self.HECU_Type != 6 && self.HECU_Type != 7 then
 		self.AnimTbl_Walk = {ACT_WALK_HURT}
