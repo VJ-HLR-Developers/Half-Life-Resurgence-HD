@@ -36,11 +36,11 @@ function ENT:OnMedicBehavior(status, statusData)
 				self:SetBodygroup(2,2)
 			end
 		end)
-		self:VJ_ACT_PLAYACTIVITY("pull_needle",true,VJ.AnimDuration(self,"pull_needle") + 0.1,false,0,{},function(sched)
+		self:PlayAnim("pull_needle",true,VJ.AnimDuration(self,"pull_needle") + 0.1,false,0,{},function(sched)
 			sched.RunCode_OnFinish = function()
-				self:VJ_ACT_PLAYACTIVITY("give_shot",true,VJ.AnimDuration(self,"give_shot") + 0.1,false,0,{},function(sched2)
+				self:PlayAnim("give_shot",true,VJ.AnimDuration(self,"give_shot") + 0.1,false,0,{},function(sched2)
 					sched2.RunCode_OnFinish = function()
-						self:VJ_ACT_PLAYACTIVITY("store_needle",true,false)
+						self:PlayAnim("store_needle",true,false)
 					end
 				end)
 			end
