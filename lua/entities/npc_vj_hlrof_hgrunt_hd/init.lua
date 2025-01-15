@@ -8,7 +8,7 @@ include("shared.lua")
 -----------------------------------------------*/
 ENT.Model = "models/vj_hlr/opfor_hd/hgrunt.mdl" -- Model(s) to spawn with | Picks a random one if it's a table
 ENT.HasOnPlayerSight = true -- Should do something when it sees the enemy? Example: Play a sound
-ENT.BecomeEnemyToPlayer = true -- Should the friendly SNPC become enemy towards the player if it's damaged by a player?
+ENT.BecomeEnemyToPlayer = 2
 
 /*
 Heavy damage:
