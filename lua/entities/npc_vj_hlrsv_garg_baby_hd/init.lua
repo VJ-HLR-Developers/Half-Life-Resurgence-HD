@@ -6,7 +6,7 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = "models/vj_hlr/hl_hd/babygarg.mdl" -- Model(s) to spawn with | Picks a random one if it's a table
+ENT.Model = "models/vj_hlr/hl_hd/babygarg.mdl"
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Init()
 	if self.Garg_Type == 0 then -- Adult garg

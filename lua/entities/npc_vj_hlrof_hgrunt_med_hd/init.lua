@@ -6,9 +6,9 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = "models/vj_hlr/opfor_hd/hgrunt_medic.mdl" -- Model(s) to spawn with | Picks a random one if it's a table
+ENT.Model = "models/vj_hlr/opfor_hd/hgrunt_medic.mdl"
 
-ENT.IsMedic = true -- Is this NPC a medic? It will heal friendly players and NPCs
+ENT.IsMedic = true
 
 -- Custom
 ENT.HECU_Type = 2

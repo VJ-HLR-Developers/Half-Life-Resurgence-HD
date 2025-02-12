@@ -6,8 +6,8 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = "models/vj_hlr/opfor_hd/hgrunt.mdl" -- Model(s) to spawn with | Picks a random one if it's a table
-ENT.HasOnPlayerSight = true -- Should do something when it sees the enemy? Example: Play a sound
+ENT.Model = "models/vj_hlr/opfor_hd/hgrunt.mdl"
+ENT.HasOnPlayerSight = true
 ENT.BecomeEnemyToPlayer = 2
 
 /*
