@@ -84,7 +84,7 @@ ENT.SoundTbl_IdleDialogueAnswer = {
 	"vj_hlr/hl1_npc/hgrunt_oppf/no.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/quiet.wav"
 }
-ENT.SoundTbl_OnReceiveOrder = {
+ENT.SoundTbl_ReceiveOrder = {
 	"vj_hlr/hl1_npc/hgrunt_oppf/moving.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/of6a1_fg02.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/right.wav",
@@ -159,7 +159,7 @@ ENT.SoundTbl_GrenadeAttack = {
 	"vj_hlr/hl1_npc/hgrunt_oppf/grenade.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/take.wav"
 }
-ENT.SoundTbl_OnGrenadeSight = {
+ENT.SoundTbl_GrenadeSight = {
 	"vj_hlr/hl1_npc/hgrunt_oppf/cover.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/down.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/grenade.wav",
@@ -168,7 +168,7 @@ ENT.SoundTbl_OnGrenadeSight = {
 	"vj_hlr/hl1_npc/hgrunt_oppf/retreat.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/takecover.wav"
 }
-ENT.SoundTbl_OnKilledEnemy = {
+ENT.SoundTbl_KilledEnemy = {
 	"vj_hlr/hl1_npc/hgrunt_oppf/killer.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/oneshot.wav",
 	"vj_hlr/hl1_npc/hgrunt_oppf/sniper.wav",
