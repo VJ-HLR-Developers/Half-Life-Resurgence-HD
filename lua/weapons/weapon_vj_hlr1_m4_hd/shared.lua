@@ -5,10 +5,10 @@ SWEP.Contact					= "http://steamcommunity.com/groups/vrejgaming"
 SWEP.Category					= "VJ Base"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire 		= false
-SWEP.NPC_ReloadSound			= {"vj_hlr/hl1_weapon/mp5/mp_reload.wav"}
+SWEP.NPC_ReloadSound			= {"vj_hlr/gsrc/wep/mp5/mp_reload.wav"}
 SWEP.NPC_CanBePickedUp			= false -- Can this weapon be picked up by NPCs? (Ex: Rebels)
 SWEP.NPC_HasSecondaryFire = true
-SWEP.NPC_SecondaryFireSound = {"vj_hlr/hl1_weapon/mp5/glauncher.wav","vj_hlr/hl1_weapon/mp5/glauncher2.wav"}
+SWEP.NPC_SecondaryFireSound = {"vj_hlr/gsrc/wep/mp5/glauncher.wav","vj_hlr/gsrc/wep/mp5/glauncher2.wav"}
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.MadeForNPCsOnly 			= true
 SWEP.WorldModel					= "models/vj_hlr/weapons/w_9mmar_hd.mdl"

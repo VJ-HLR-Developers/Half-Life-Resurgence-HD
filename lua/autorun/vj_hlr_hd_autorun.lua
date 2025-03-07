@@ -13,7 +13,7 @@ local VJExists = file.Exists("lua/autorun/vj_base_autorun.lua", "GAME")
 if VJExists == true then
 	include("autorun/vj_controls.lua")
 	
-	local spawnCategory = "HL Resurgence: HD"
+	local spawnCategory = "HL Resurgence: GoldSrc HD"
 	VJ.AddCategoryInfo(spawnCategory, {Icon = "vj_hl/icons/hl1_hd.png"})
 		
 		-- HECU
