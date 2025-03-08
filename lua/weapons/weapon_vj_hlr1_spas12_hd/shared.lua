@@ -16,7 +16,6 @@ SWEP.MadeForNPCsOnly 			= true
 SWEP.WorldModel					= "models/vj_hlr/weapons/w_shotgun_hd.mdl"
 SWEP.HoldType 					= "shotgun"
 	-- World Model ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel_Invisible = true -- Should the world model be invisible?
 SWEP.WorldModel_UseCustomPosition = true
 SWEP.WorldModel_CustomPositionAngle = Vector(5,181,90)
 SWEP.WorldModel_CustomPositionOrigin = Vector(-1.5,-19,0)
@@ -47,14 +46,8 @@ function SWEP:Init()
 	end)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function SWEP:OnDrawWorldModel() -- This is client only!
-	if IsValid(self:GetOwner()) then
-		self.WorldModel_Invisible = true
-		return false
-	else
-		self.WorldModel_Invisible = false
-		return true -- return false to not draw the world model
-	end
+function SWEP:OnDrawWorldModel()
+	return !IsValid(self:GetOwner())
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function SWEP:PrimaryAttackEffects(owner)
