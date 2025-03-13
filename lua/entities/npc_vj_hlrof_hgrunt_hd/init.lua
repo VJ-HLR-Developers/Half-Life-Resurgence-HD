@@ -205,28 +205,28 @@ ENT.HECU_WepBG = 3
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:HECU_OnInit()
 	if self.HECU_Type == 1 then
-		self:SetBodygroup(1,math.random(0,7))
+		self:SetBodygroup(1, math.random(0, 7))
 		
-		local randwep = math.random(1,4)
+		local randwep = math.random(1, 4)
 		if randwep == 1 or randwep == 2 then
-			self:SetBodygroup(3,0)
+			self:SetBodygroup(3, 0)
 		elseif randwep == 3 then
-			self:SetBodygroup(3,1)
+			self:SetBodygroup(3, 1)
 		elseif randwep == 4 then
-			self:SetBodygroup(3,2)
+			self:SetBodygroup(3, 2)
 		end
 		
 		if self:GetBodygroup(1) == 2 then
-			self:SetBodygroup(3,1)
+			self:SetBodygroup(3, 1)
 		end
 		
 		-- Marminen hamar
 		if self:GetBodygroup(3) == 0 then
-			self:SetBodygroup(2,0) -- Barz zenk
+			self:SetBodygroup(2, 0) -- Barz zenk
 		elseif self:GetBodygroup(3) == 1 then
-			self:SetBodygroup(2,3) -- bonebakshen
+			self:SetBodygroup(2, 3) -- bonebakshen
 		elseif self:GetBodygroup(3) == 2 then
-			self:SetBodygroup(2,1) -- Medz reshesh
+			self:SetBodygroup(2, 1) -- Medz reshesh
 		end
 	end
 	self.AnimTbl_Run = {ACT_SPRINT}

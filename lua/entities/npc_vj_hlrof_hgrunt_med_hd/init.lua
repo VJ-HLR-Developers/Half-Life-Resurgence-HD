@@ -26,27 +26,27 @@ function ENT:OnMedicBehavior(status, statusData)
 	if status == "BeforeHeal" then
 		-- print(self:GetBodygroup(3))
 		self.HECUMedic_HealBG = self:GetBodygroup(2)
-		timer.Simple(0.8,function()
+		timer.Simple(0.8, function()
 			if IsValid(self) then
-				self:SetBodygroup(2,3)
+				self:SetBodygroup(2, 3)
 			end
 		end)
-		timer.Simple(1.9,function()
+		timer.Simple(1.9, function()
 			if IsValid(self) then
-				self:SetBodygroup(2,2)
+				self:SetBodygroup(2, 2)
 			end
 		end)
-		self:PlayAnim("pull_needle",true,VJ.AnimDuration(self,"pull_needle") + 0.1,false,0,{},function(sched)
+		self:PlayAnim("pull_needle", true, VJ.AnimDuration(self, "pull_needle") + 0.1, false, 0, {}, function(sched)
 			sched.RunCode_OnFinish = function()
-				self:PlayAnim("give_shot",true,VJ.AnimDuration(self,"give_shot") + 0.1,false,0,{},function(sched2)
+				self:PlayAnim("give_shot", true, VJ.AnimDuration(self, "give_shot") + 0.1, false, 0, {}, function(sched2)
 					sched2.RunCode_OnFinish = function()
-						self:PlayAnim("store_needle",true,false)
+						self:PlayAnim("store_needle", true, false)
 					end
 				end)
 			end
 		end)
 	elseif status == "OnReset" then
-		timer.Simple(0.85, function() if IsValid(self) then self:SetBodygroup(2,3) end end)
-		timer.Simple(1.7, function() if IsValid(self) then self:SetBodygroup(2,self.HECUMedic_HealBG) end end)
+		timer.Simple(0.85, function() if IsValid(self) then self:SetBodygroup(2, 3) end end)
+		timer.Simple(1.7, function() if IsValid(self) then self:SetBodygroup(2, self.HECUMedic_HealBG) end end)
 	end
 end
